@@ -1,25 +1,48 @@
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
 
 </head>
 
 <body>
+    <!-- ///////////////////////////////////////// scroll to top button///////////////////////////////////    -->
+    <button onclick="topFunction()" id="topbtn" title="torna in cima ">top </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("topbtn").style.display = "block";
+            } else {
+                document.getElementById("topbtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- ///////////////////////////////////////// scroll to top button - END - ///////////////////////////////////    -->
+
+
+
     <button class="tablink" onclick="openPage('Home', this, 'black')" id="defaultOpen">Home</button>
     <button class="tablink" onclick="openPage('Portraits', this, 'black')">Portraits</button>
     <button class="tablink" onclick="openPage('Landscape', this, 'black')">Landscape</button>
     <button class="tablink" onclick="openPage('About', this, 'black')">About</button>
 
     <div id="Home" class="tabcontent">
+        <!--<img class="homebckgrn" src="img/home.jpg">-->
         <p class="title">Andrea Bragetta photography</p>
     </div>
 
     <div id="Portraits" class="tabcontent">
-        <h3>Portraits</h3>
-        <p>Some news this fine day!</p>
-
         <div class="row">
             <div class="column">
                 <img src="img/1.jpg">
