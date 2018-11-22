@@ -1,15 +1,134 @@
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
-    <p class="title">Andrea Bragetta photography</p>
+
 </head>
 
 <body>
-    <button type="button" onclick="alert" class="button">ciao</button>
+    <button class="tablink" onclick="openPage('Home', this, 'black')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Portraits', this, 'black')">Portraits</button>
+    <button class="tablink" onclick="openPage('Landscape', this, 'black')">Landscape</button>
+    <button class="tablink" onclick="openPage('About', this, 'black')">About</button>
 
+    <div id="Home" class="tabcontent">
+        <p class="title">Andrea Bragetta photography</p>
+    </div>
+
+    <div id="Portraits" class="tabcontent">
+        <h3>Portraits</h3>
+        <p>Some news this fine day!</p>
+
+        <div class="row">
+            <div class="column">
+                <img src="img/1.jpg">
+                <img src="img/2.jpg">
+                <img src="img/home.jpg">
+                <img src="img/4.jpg">
+                <img src="img/5.jpg">
+                <img src="img/anna1.jpg">
+                <img src="img/anna2.jpg">
+            </div>
+            <div class="column">
+                <img src="img/anna3.jpg">
+                <img src="img/anna4.jpg">
+                <img src="img/anna5.jpg">
+                <img src="img/federica1.jpg">
+                <img src="img/anna6.jpg">
+                <img src="img/federica2.jpg">
+            </div>
+            <div class="column">
+                <img src="img/anna7.jpg">
+                <img src="img/anna8.jpg">
+                <img src="img/guendalina1.jpg">
+                <img src="img/federica3.jpg">
+                <img src="img/federica4.jpg">
+                <img src="img/anna9.jpg">
+                <img src="img/anna10.jpg">
+            </div>
+            <div class="column">
+                <img src="img/anna15.jpg">
+                <img src="img/anna12.jpg">
+                <img src="img/federica5.jpg">
+                <img src="img/guendalina2.jpg">
+                <img src="img/anna13.jpg">
+                <img src="img/anna11.jpg">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Landscape" class="tabcontent">
+        <h3>Landscape</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+        <div class="row">
+            <div class="column">
+                <img src="img/1.jpg">
+                <img src="img/2.jpg">
+                <img src="img/home.jpg">
+                <img src="img/4.jpg">
+                <img src="img/5.jpg">
+                <img src="img/anna1.jpg">
+                <img src="img/anna2.jpg">
+            </div>
+            <div class="column">
+                <img src="img/anna7.jpg">
+                <img src="img/anna8.jpg">
+                <img src="img/guendalina1.jpg">
+                <img src="img/federica3.jpg">
+                <img src="img/federica4.jpg">
+                <img src="img/anna9.jpg">
+                <img src="img/anna10.jpg">
+
+            </div>
+            <div class="column">
+                <img src="img/anna3.jpg">
+                <img src="img/anna4.jpg">
+                <img src="img/anna5.jpg">
+                <img src="img/federica1.jpg">
+                <img src="img/anna6.jpg">
+                <img src="img/federica2.jpg">
+
+            </div>
+            <div class="column">
+                <img src="img/anna15.jpg">
+                <img src="img/anna12.jpg">
+                <img src="img/federica5.jpg">
+                <img src="img/guendalina2.jpg">
+                <img src="img/anna13.jpg">
+                <img src="img/anna11.jpg">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 
 </body>
+
 
 
 
