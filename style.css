@@ -5,7 +5,7 @@ html {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .imgbox {
@@ -23,7 +23,7 @@ html {
     max-width: 75%;
     max-height: 75%;
     margin: 0;
-    margin-top: 16%;
+    margin-top: 15%;
     margin-left: -9%;
     transform: scale(0.9);
 }
@@ -85,7 +85,8 @@ body, html {
 
 #Home {
     background-color: #ffffff;
-    background-image: url("img/home.jpg");
+    background-image: url("img/letizia2.jpg");
+    background-size: cover;
 }
 
 #Portraits {
